@@ -39,11 +39,11 @@ public class BaseTest {
 
 	driver = new ChromeDriver();
 	 
-
+	driver.manage().window().maximize();
 	//Open Admin Login 
 
 	driver.get("http://15.207.109.183:8080/shop/customer/customLogon.html"); 
-
+	
 	 
 
 	} 
