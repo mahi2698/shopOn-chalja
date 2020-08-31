@@ -14,8 +14,8 @@ pipeline {
                 //sh label: '', script: 'java -cp . com.ShopOn.TestRunner.TestRunner'
                 //sh label: '', script: 'java ./src/test/java/com/ShopOn/TestRunner/TestRunner.java'
                 //sh label: '', script: '''ProjectPath=$WORKSPACE && classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/* && java com.ShopOn.TestRunner.TestRunner'''
-                //sh label: '', script: 'java $WORKSPACE/target/test-classes/com/ShopOn/TestRunner/TestRunner'
-                sh label: '', script: 'java -jar $WORKSPACE/target/com.ShopOn-0.0.1-SNAPSHOT.jar'
+                sh label: '', script: 'java $WORKSPACE/target/test-classes/com/ShopOn/TestRunner/TestRunner'
+                
             }
         }
     }
