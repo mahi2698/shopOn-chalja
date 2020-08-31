@@ -67,8 +67,8 @@
  <!-- https://mvnrepository.com/artifact/junit/junit -->
 <dependency>
 <groupId>junit</groupId>
-<artifactId>org.junit.runner.JUnitCore</artifactId>
-<version>4.13</version>
+<artifactId>junit</artifactId>
+<version>4.12</version>
 <scope>test</scope>
 </dependency>
         <dependency>
