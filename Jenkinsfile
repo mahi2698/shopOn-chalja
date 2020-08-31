@@ -4,7 +4,7 @@ pipeline {
         stage('Build'){
             steps {
                 echo "Build Project"
-                sh label: '', script: 'mvn clean package'
+                sh label: '', script: 'mvn clean install'
             }
         }
         stage('JAVA RUN'){
