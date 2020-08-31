@@ -40,7 +40,7 @@ public class BaseTest {
 	ChromeOptions options = new ChromeOptions();
 	options.setHeadless(true);
 
-	driver = new ChromeDriver();
+	driver = new ChromeDriver(options);
 	 
 	
 	//Open Admin Login 
