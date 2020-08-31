@@ -10,7 +10,7 @@ pipeline {
         stage('JAVA RUN'){
             steps{
                 echo "JAVA RUN"
-                sh label: '', script: 'javac ./src/test/java/com/ShopOn/TestRunner/TestRunner.java'
+                //sh label: '', script: 'javac ./src/test/java/com/ShopOn/TestRunner/TestRunner.java'
                 sh label: '', script: 'java ./src/test/java/com/ShopOn/TestRunner/TestRunner.java'
             }
         }
