@@ -18,7 +18,7 @@ pipeline {
    cp -rf $Maven_Directory/*/*/*/*/*/*.jar $WORKSPACE/target/test-classes/
 ProjectPath=$WORKSPACE
 classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/*/*/*/*.class
-java com.ShopOn.TestRunner.TestRunner'''
+sudo java com.ShopOn.TestRunner.TestRunner'''
             }
         }
     }
