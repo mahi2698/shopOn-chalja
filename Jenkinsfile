@@ -22,8 +22,7 @@ find $Maven_Directory -name \'*.jar\' | xargs -i cp -p \'{}\' $WORKSPACE/target/
                 //sh label: '', script: '''ProjectPath=$WORKSPACE && classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/* && java com.ShopOn.TestRunner.TestRunner'''
                 //sh label: '', script: 'java $WORKSPACE/target/test-classes/com/ShopOn/TestRunner/TestRunner'
                 sh label: '', script: '''ProjectPath=$WORKSPACE
-classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/*
-java com.ShopOn.TestRunner.TestRunner'''
+classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/*'''
             }
         }
     }
