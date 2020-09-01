@@ -16,7 +16,7 @@ pipeline {
         stage('JUnit REPORT'){
             steps{
                 echo "JUNIT Reports"
-                junit '$WORKSPACE/target/surefire-reports/*.xml'
+                junit './target/surefire-reports/*.xml'
             }
         }
     }
