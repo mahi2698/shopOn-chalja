@@ -10,7 +10,7 @@ pipeline {
         stage('HTML REPORT'){
             steps{
                 echo "HTML Report"
-                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: '*.html', reportName: 'HTML Report', reportTitles: ''])
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '$WORKSPACE', reportFiles: '*.html', reportName: 'HTML Report', reportTitles: ''])
             }
         }
         stage('JUnit REPORT'){
