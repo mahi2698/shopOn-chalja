@@ -14,8 +14,13 @@ pipeline {
                 //sh label: '', script: 'java -cp . com.ShopOn.TestRunner.TestRunner'
                 //sh label: '', script: 'java ./src/test/java/com/ShopOn/TestRunner/TestRunner.java'
                 //sh label: '', script: '''ProjectPath=$WORKSPACE && classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/* && java com.ShopOn.TestRunner.TestRunner'''
-                sh label: '',script: 'javac $WORKSPACE/src/test/java/com/ShopOn/TestRunner/TestRunner.java'
-                sh label: '', script: 'java $WORKSPACE/src/test/java/com/ShopOn/TestRunner/TestRunner'
+                //sh label: '',script: 'javac $WORKSPACE/src/test/java/com/ShopOn/TestRunner/TestRunner.java'
+                //sh label: '', script: 'java $WORKSPACE/src/test/java/com/ShopOn/TestRunner/TestRunner'
+                sh label: '', script: '''Maven_Directory = \'/remote/users/pagarwal/Maven/repository\'
+dir -Path $Maven_Directory -Filter *.jar -Recurse | ForEach-Object { Copy-Item $_.FullName $env:WORKSPACE\\target\\test-classes }
+ProjectPath=$WORKSPACE
+classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/*
+java com.ShopOn.TestRunner.TestRunner'''
                 
             }
         }
