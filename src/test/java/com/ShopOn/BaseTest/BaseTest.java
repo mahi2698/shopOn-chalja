@@ -27,8 +27,8 @@ public class BaseTest {
 	report = new ExtentReports("./ExtentReportResults.html",false);
 	//System.setProperty("webdriver.chrome.driver", "/remote/users/pagarwal/chromedriver");
 	//System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver");
-	System.setProperty("webdriver.chrome.driver", "/home/centos/chromedriver");
-	//System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver.exe");
+	//System.setProperty("webdriver.chrome.driver", "/home/centos/chromedriver");
+	System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver.exe");
 	//test = report.startTest("ExtentDemo");
 	}
 
