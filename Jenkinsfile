@@ -16,7 +16,7 @@ pipeline {
                 //sh label: '', script: '''ProjectPath=$WORKSPACE && classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/* && java com.ShopOn.TestRunner.TestRunner'''
                 //sh label: '',script: 'javac $WORKSPACE/src/test/java/com/ShopOn/TestRunner/TestRunner.java'
                 //sh label: '', script: 'java $WORKSPACE/src/test/java/com/ShopOn/TestRunner/TestRunner'
-                sh label: '', script: '''Maven_Directory="/remote/users/pagarwal/Maven/repository"
+                sh label: '', script: '''Maven_Directory="/usr/share/maven/repository"
 cp -r $Maven_Directory/*.jar $WORKSPACE/target/test-classes/
 ProjectPath=$WORKSPACE
 classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/*
