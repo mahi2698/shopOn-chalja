@@ -18,7 +18,7 @@ pipeline {
 
 ProjectPath=$WORKSPACE
 classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/*
-java com.ShopOn.TestRunner.TestRunner'''
+java com/ShopOn/TestRunner/TestRunner'''
             }
         }
     }
