@@ -18,7 +18,8 @@ pipeline {
    
 ProjectPath=$WORKSPACE
 classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/*/*/*/*.class
-sudo java com.ShopOn.TestRunner.TestRunner'''
+sudo chmod udo+rwx *.class
+java com.ShopOn.TestRunner.TestRunner'''
             }
         }
     }
