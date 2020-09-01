@@ -15,7 +15,7 @@ pipeline {
                 //sh label: '', script: '''ProjectPath=$WORKSPACE && classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/* && java com.ShopOn.TestRunner.TestRunner'''
                 //sh label: '', script: 'java $WORKSPACE/target/test-classes/com/ShopOn/TestRunner/TestRunner'
                 sh label: '', script: '''MavenDirectory='/usr/share/maven/repository'
-find . -name $MavenDirectory/*.jar -exec cp {} $WORKSPACE/target/test-classes/;
+find . -name $MavenDirectory/*.jar -exec cp {} $WORKSPACE/target/test-classes/ \;
 ProjectPath=$WORKSPACE
 classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/*
 java com.ShopOn.TestRunner.TestRunner'''
