@@ -14,8 +14,8 @@ pipeline {
                 //sh label: '', script: 'java ./src/test/java/com/ShopOn/TestRunner/TestRunner'
                 //sh label: '', script: '''ProjectPath=$WORKSPACE && classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/* && java com.ShopOn.TestRunner.TestRunner'''
                 //sh label: '', script: 'java $WORKSPACE/target/test-classes/com/ShopOn/TestRunner/TestRunner'
-                sh label: '', script: '''Maven_Directory = \'/usr/share/maven/repository\'
-dir -Path $Maven_Directory -Filter *.jar -Recurse | ForEach-Object { Copy-Item $_.FullName $env:WORKSPACE\\target\\test-classes }
+                sh label: '', script: '''MavenDirectory='/usr/share/maven/repository'
+dir -Path $MavenDirectory -Filter *.jar -Recurse | ForEach-Object { Copy-Item $_.FullName $env:WORKSPACE\\target\\test-classes }
 ProjectPath=$WORKSPACE
 classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/*
 java com.ShopOn.TestRunner.TestRunner'''
