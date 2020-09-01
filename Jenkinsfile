@@ -18,7 +18,7 @@ pipeline {
                 sh label: '', script: '''MavenDirectory='/usr/share/maven/repository'
 cp -rf $Maven_Directory/*/*/*/*/*/*.jar $WORKSPACE/target/test-classes/   
 ProjectPath=$WORKSPACE
-classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/*/*/*/*.class
+classpath=$WORKSPACE/target/test-classes;$WORKSPACE/target/test-classes/*
 java com.ShopOn.TestRunner.TestRunner'''
             }
         }
